@@ -1,17 +1,17 @@
 <?php
 
 /*
- Plugin Name: Clippy Plugin for Wordpress
- Plugin URI: http://github.com/kennethreitz/clippy-wordpress-plugin
- Description: Adds Clippy to WordPress, thanks to <a href="http://kennethreitz.com">Kenneth Reitz</a>.
- Author: Kenneth Reitz
- Author URI: http://kennethreitz.com
- Version: 0.3
+ Plugin Name: Clippy Function for PHP
+ Plugin URI: http://github.com/infomaniac50/php-clippy
+ Description: Adds Clippy to PHP.
+ Author: Derek Chafin
+ Original Author: Kenneth Reitz
+ Version: 0.1
  */
 
-$dir = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
 
-function clippy($text='copy-me') { ?>
+
+function clippy($text='copy-me', $dir = 'lib/') { ?>
     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
             width="110"
             height="14"
@@ -22,7 +22,7 @@ function clippy($text='copy-me') { ?>
     <param name="scale" value="noscale" />
     <param NAME="FlashVars" value="text=#<?php echo $text ?>">
     <param name="bgcolor" value="#FFFFFF">
-    <embed src="<?php echo $dir ?>lib/clippy.swf"
+    <embed src="<?php echo $dir ?>clippy.swf"
            width="110"
            height="14"
            name="clippy"
