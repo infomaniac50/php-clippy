@@ -1,8 +1,3 @@
-<script type="text/javascript" src="http://script.aculo.us/github/highlight.js"></script>
-<script type="text/javascript">
-    hljs.initHighlightingOnLoad.apply(null, hljs.ALL_LANGUAGES);
-</script>
-
 # Clippy for PHP
 
 Once this plugin is installed, you can add a pretty Clippy clip.
