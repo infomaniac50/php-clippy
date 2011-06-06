@@ -6,7 +6,7 @@
  Description: Adds Clippy to PHP.
  Author: Derek Chafin
  Original Author: Kenneth Reitz
- Version: 0.1
+ Version: 0.2
  */
 
 
@@ -16,13 +16,13 @@ function clippy($text='copy-me', $dir = 'lib/') { ?>
             width="110"
             height="14"
             id="clippy" >
-    <param name="movie" value="/flash/clippy.swf"/>
+    <param name="movie" value="<?php echo $dir; ?>clippy.swf"/>
     <param name="allowScriptAccess" value="always" />
     <param name="quality" value="high" />
     <param name="scale" value="noscale" />
-    <param NAME="FlashVars" value="text=<?php echo $text ?>">
+    <param NAME="FlashVars" value="text=<?php echo urlencode($text); ?>">
     <param name="bgcolor" value="#FFFFFF">
-    <embed src="<?php echo $dir ?>clippy.swf"
+    <embed src="<?php echo $dir; ?>clippy.swf"
            width="110"
            height="14"
            name="clippy"
@@ -30,7 +30,7 @@ function clippy($text='copy-me', $dir = 'lib/') { ?>
            allowScriptAccess="always"
            type="application/x-shockwave-flash"
            pluginspage="http://www.macromedia.com/go/getflashplayer"
-           FlashVars="text=<?php echo $text ?>"
+           FlashVars="text=<?php echo urlencode($text); ?>"
            bgcolor="#FFFFFF"
     />
     </object>
